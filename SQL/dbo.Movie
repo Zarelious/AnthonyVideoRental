@@ -1,0 +1,9 @@
+﻿CREATE TABLE [dbo].[Movie] (
+    [IdMovie]        INT          IDENTITY (1, 1) NOT NULL,
+    [Name]           VARCHAR (20) NOT NULL,
+    [Classification] VARCHAR (10) NOT NULL,
+    [IdSucursal]     INT          NOT NULL,
+    PRIMARY KEY CLUSTERED ([IdMovie] ASC),
+    CONSTRAINT [FK_Movie_ToSucursal] FOREIGN KEY ([IdSucursal]) REFERENCES [dbo].[Sucursal] ([IdSucursal])
+);
+
