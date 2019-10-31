@@ -98,7 +98,7 @@ SELECT IdClient, FirstName, LastName, email, telefone, DOB, Status, Address, Pro
               <Mapping SourceColumn="Idsucursal" DataSetColumn="Idsucursal" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="DataVidConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteQuery" Modifier="Public" Name="DeleteQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="DeleteQuery">
+              <DbSource ConnectionRef="DataVidConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteQuery" Modifier="Public" Name="DeleteQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="DeleteQuery">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>DELETE FROM [dbo].[Client] WHERE (([IdClient] = @Original_IdClient))</CommandText>
@@ -108,7 +108,7 @@ SELECT IdClient, FirstName, LastName, email, telefone, DOB, Status, Address, Pro
                   </DbCommand>
                 </DeleteCommand>
               </DbSource>
-              <DbSource ConnectionRef="DataVidConnectionString (Settings)" DbObjectName="dbo.Client" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillById_Name_Last" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="FillById_Name_Last" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillById_Name_Last">
+              <DbSource ConnectionRef="DataVidConnectionString (Settings)" DbObjectName="dbo.Client" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillById_Name_Last" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy1" GeneratorSourceName="FillById_Name_Last" GetMethodModifier="Public" GetMethodName="GetDataBy1" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="FillById_Name_Last">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT IdClient, FirstName, LastName, email, telefone, DOB, Status, Address, ProoOfId, Qty, Idsucursal FROM dbo.Client
@@ -121,7 +121,7 @@ WHERE IdClient = @IdClient or FirstName = @FirstName or LastName = @LastName</Co
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="DataVidConnectionString (Settings)" DbObjectName="dbo.Client" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByIdClient" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy1" GeneratorSourceName="FillByIdClient" GetMethodModifier="Public" GetMethodName="GetDataBy1" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="FillByIdClient">
+              <DbSource ConnectionRef="DataVidConnectionString (Settings)" DbObjectName="dbo.Client" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByIdClient" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy11" GeneratorSourceName="FillByIdClient" GetMethodModifier="Public" GetMethodName="GetDataBy11" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy11" UserSourceName="FillByIdClient">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT IdClient, FirstName, LastName, email, telefone, DOB, Status, Address, ProoOfId, Qty, Idsucursal 
@@ -133,7 +133,7 @@ WHERE IdClient = @IdClient</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="DataVidConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="InsertQuery" Modifier="Public" Name="InsertQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy4" UserSourceName="InsertQuery">
+              <DbSource ConnectionRef="DataVidConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="InsertQuery" Modifier="Public" Name="InsertQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="InsertQuery">
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>INSERT INTO [dbo].[Client] ([FirstName], [LastName], [email], [telefone], [DOB], [Status], [Address], [ProoOfId], [Qty], [Idsucursal]) VALUES (@FirstName, @LastName, @email, @telefone, @DOB, @Status, @Address, @ProoOfId, @Qty, @Idsucursal)</CommandText>
@@ -152,7 +152,18 @@ WHERE IdClient = @IdClient</CommandText>
                   </DbCommand>
                 </InsertCommand>
               </DbSource>
-              <DbSource ConnectionRef="DataVidConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="UpdateQuery" Modifier="Public" Name="UpdateQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="UpdateQuery">
+              <DbSource ConnectionRef="DataVidConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="UpdateQty" Modifier="Public" Name="UpdateQty" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="UpdateQty">
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>UPDATE [dbo].[Client] SET [Qty] = @Qty WHERE ([IdClient] = @IdClient);</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Qty" ColumnName="Qty" DataSourceName="[C:\USERS\ANTHO\VIDEOS\ANTHONYVIDEORENTAL(2.2)\VIDEOCLS\DAL\DATAVID.MDF].dbo.Client" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Qty" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Qty" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="IdClient" ColumnName="IdClient" DataSourceName="[C:\USERS\ANTHO\VIDEOS\ANTHONYVIDEORENTAL(2.2)\VIDEOCLS\DAL\DATAVID.MDF].dbo.Client" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@IdClient" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="IdClient" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+              <DbSource ConnectionRef="DataVidConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="UpdateQuery" Modifier="Public" Name="UpdateQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy4" UserSourceName="UpdateQuery">
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>UPDATE [dbo].[Client] SET [FirstName] = @FirstName, [LastName] = @LastName, [email] = @email, [telefone] = @telefone, [DOB] = @DOB, [Status] = @Status, [Address] = @Address, [ProoOfId] = @ProoOfId, [Qty] = @Qty, [Idsucursal] = @Idsucursal WHERE (([IdClient] = @Original_IdClient))</CommandText>
@@ -453,7 +464,7 @@ SELECT IdMovie, Name, Classification, IdSucursal FROM Movie WHERE (IdMovie = @Id
               <Mapping SourceColumn="IdSucursal" DataSetColumn="IdSucursal" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="DataVidConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteQuery" Modifier="Public" Name="DeleteQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="DeleteQuery">
+              <DbSource ConnectionRef="DataVidConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteQuery" Modifier="Public" Name="DeleteQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="DeleteQuery">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>DELETE FROM [dbo].[Movie] WHERE (([IdMovie] = @Original_IdMovie))</CommandText>
@@ -463,7 +474,7 @@ SELECT IdMovie, Name, Classification, IdSucursal FROM Movie WHERE (IdMovie = @Id
                   </DbCommand>
                 </DeleteCommand>
               </DbSource>
-              <DbSource ConnectionRef="DataVidConnectionString (Settings)" DbObjectName="dbo.Movie" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByIdMovie" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="FillByIdMovie" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillByIdMovie">
+              <DbSource ConnectionRef="DataVidConnectionString (Settings)" DbObjectName="dbo.Movie" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByIdMovie" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy1" GeneratorSourceName="FillByIdMovie" GetMethodModifier="Public" GetMethodName="GetDataBy1" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="FillByIdMovie">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT IdMovie, Name, Classification, IdSucursal 
@@ -475,7 +486,18 @@ WHERE IdMovie LIKE @IdMovie</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="DataVidConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="InsertQuery" Modifier="Public" Name="InsertQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="InsertQuery">
+              <DbSource ConnectionRef="DataVidConnectionString (Settings)" DbObjectName="dbo.Movie" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByName" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy4" GeneratorSourceName="FillByName" GetMethodModifier="Public" GetMethodName="GetDataBy4" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy4" UserSourceName="FillByName">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT IdMovie, Name, Classification, IdSucursal FROM dbo.Movie
+WHERE Name LIKE @Name</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Name" ColumnName="Name" DataSourceName="[C:\CODE\C#\VIDEORENTAL\21 OCT 19\ANTHONYVIDEORENTAL\VIDEOCLS\DAL\DATAVID.MDF].dbo.Movie" DataTypeServer="varchar(20)" DbType="AnsiString" Direction="Input" ParameterName="@Name" Precision="0" ProviderType="VarChar" Scale="0" Size="20" SourceColumn="Name" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="DataVidConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="InsertQuery" Modifier="Public" Name="InsertQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="InsertQuery">
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>INSERT INTO [dbo].[Movie] ([Name], [Classification], [IdSucursal]) 
@@ -488,15 +510,15 @@ VALUES (@Name, @Classification, @IdSucursal)</CommandText>
                   </DbCommand>
                 </InsertCommand>
               </DbSource>
-              <DbSource ConnectionRef="DataVidConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="UpdateQuery" Modifier="Public" Name="UpdateQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="UpdateQuery">
+              <DbSource ConnectionRef="DataVidConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="UpdateQuery" Modifier="Public" Name="UpdateQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="UpdateQuery">
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>UPDATE [dbo].[Movie] SET [Name] = @Name, [Classification] = @Classification, [IdSucursal] = @IdSucursal WHERE (([IdMovie] = @Original_IdMovie))</CommandText>
+                    <CommandText>UPDATE [dbo].[Movie] SET [Name] = @Name, [Classification] = @Classification, [IdSucursal] = @IdSucursal WHERE (([IdMovie] = @IdMovie))</CommandText>
                     <Parameters>
-                      <Parameter AllowDbNull="false" AutogeneratedName="Name" ColumnName="Name" DataSourceName="[C:\CODE\C#\VIDEORENTAL\15 OCT 19\ANTHONYVIDEORENTAL\VIDEOCLS\DAL\DATAVID.MDF].dbo.Movie" DataTypeServer="varchar(20)" DbType="AnsiString" Direction="Input" ParameterName="@Name" Precision="0" ProviderType="VarChar" Scale="0" Size="20" SourceColumn="Name" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="Classification" ColumnName="Classification" DataSourceName="[C:\CODE\C#\VIDEORENTAL\15 OCT 19\ANTHONYVIDEORENTAL\VIDEOCLS\DAL\DATAVID.MDF].dbo.Movie" DataTypeServer="varchar(10)" DbType="AnsiString" Direction="Input" ParameterName="@Classification" Precision="0" ProviderType="VarChar" Scale="0" Size="10" SourceColumn="Classification" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="IdSucursal" ColumnName="IdSucursal" DataSourceName="[C:\CODE\C#\VIDEORENTAL\15 OCT 19\ANTHONYVIDEORENTAL\VIDEOCLS\DAL\DATAVID.MDF].dbo.Movie" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@IdSucursal" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="IdSucursal" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="Original_IdMovie" ColumnName="IdMovie" DataSourceName="[C:\CODE\C#\VIDEORENTAL\15 OCT 19\ANTHONYVIDEORENTAL\VIDEOCLS\DAL\DATAVID.MDF].dbo.Movie" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Original_IdMovie" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="IdMovie" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Name" ColumnName="Name" DataSourceName="[C:\USERS\GLENN\ONEDRIVE\CODE\C#\ANTHONYVIDEORENTAL\VIDEOCLS\DAL\DATAVID.MDF].dbo.Movie" DataTypeServer="varchar(20)" DbType="AnsiString" Direction="Input" ParameterName="@Name" Precision="0" ProviderType="VarChar" Scale="0" Size="20" SourceColumn="Name" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Classification" ColumnName="Classification" DataSourceName="[C:\USERS\GLENN\ONEDRIVE\CODE\C#\ANTHONYVIDEORENTAL\VIDEOCLS\DAL\DATAVID.MDF].dbo.Movie" DataTypeServer="varchar(10)" DbType="AnsiString" Direction="Input" ParameterName="@Classification" Precision="0" ProviderType="VarChar" Scale="0" Size="10" SourceColumn="Classification" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="IdSucursal" ColumnName="IdSucursal" DataSourceName="[C:\USERS\GLENN\ONEDRIVE\CODE\C#\ANTHONYVIDEORENTAL\VIDEOCLS\DAL\DATAVID.MDF].dbo.Movie" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@IdSucursal" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="IdSucursal" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="IdMovie" ColumnName="IdMovie" DataSourceName="[C:\USERS\GLENN\ONEDRIVE\CODE\C#\ANTHONYVIDEORENTAL\VIDEOCLS\DAL\DATAVID.MDF].dbo.Movie" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@IdMovie" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="IdMovie" SourceColumnNullMapping="false" SourceVersion="Original" />
                     </Parameters>
                   </DbCommand>
                 </UpdateCommand>
@@ -529,7 +551,44 @@ VALUES (@Name, @Classification, @IdSucursal)</CommandText>
               <Mapping SourceColumn="IdFormat" DataSetColumn="IdFormat" />
               <Mapping SourceColumn="Qty" DataSetColumn="Qty" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="DataVidConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteQuery" Modifier="Public" Name="DeleteQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="DeleteQuery">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>DELETE FROM [dbo].[MovieFormat] WHERE (([IdMovie] = @Original_IdMovie) AND ([IdFormat] = @IdFormat))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_IdMovie" ColumnName="IdMovie" DataSourceName="[C:\CODE\C#\VIDEORENTAL\21 OCT 19\ANTHONYVIDEORENTAL\VIDEOCLS\DAL\DATAVID.MDF].dbo.MovieFormat" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Original_IdMovie" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="IdMovie" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="IdFormat" ColumnName="IdFormat" DataSourceName="[C:\CODE\C#\VIDEORENTAL\21 OCT 19\ANTHONYVIDEORENTAL\VIDEOCLS\DAL\DATAVID.MDF].dbo.MovieFormat" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@IdFormat" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="IdFormat" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+              </DbSource>
+              <DbSource ConnectionRef="DataVidConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="InsertQuery" Modifier="Public" Name="InsertQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="InsertQuery">
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>INSERT INTO [dbo].[MovieFormat] ([IdMovie], [IdFormat], [Qty]) VALUES (@IdMovie, @IdFormat, @Qty)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="IdMovie" ColumnName="IdMovie" DataSourceName="[C:\CODE\C#\VIDEORENTAL\21 OCT 19\ANTHONYVIDEORENTAL\VIDEOCLS\DAL\DATAVID.MDF].dbo.MovieFormat" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@IdMovie" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="IdMovie" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="IdFormat" ColumnName="IdFormat" DataSourceName="[C:\CODE\C#\VIDEORENTAL\21 OCT 19\ANTHONYVIDEORENTAL\VIDEOCLS\DAL\DATAVID.MDF].dbo.MovieFormat" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@IdFormat" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="IdFormat" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Qty" ColumnName="Qty" DataSourceName="[C:\CODE\C#\VIDEORENTAL\21 OCT 19\ANTHONYVIDEORENTAL\VIDEOCLS\DAL\DATAVID.MDF].dbo.MovieFormat" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Qty" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Qty" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+              </DbSource>
+              <DbSource ConnectionRef="DataVidConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="UpdateQuery" Modifier="Public" Name="UpdateQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="UpdateQuery">
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>UPDATE [dbo].[MovieFormat] SET [Qty] = @Qty
+WHERE (([IdMovie] = @IdMovie) AND ([IdFormat] = @IdFormat))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Qty" ColumnName="Qty" DataSourceName="[C:\CODE\C#\VIDEORENTAL\21 OCT 19\ANTHONYVIDEORENTAL\VIDEOCLS\DAL\DATAVID.MDF].dbo.MovieFormat" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Qty" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Qty" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="IdMovie" ColumnName="IdMovie" DataSourceName="[C:\CODE\C#\VIDEORENTAL\21 OCT 19\ANTHONYVIDEORENTAL\VIDEOCLS\DAL\DATAVID.MDF].dbo.MovieFormat" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@IdMovie" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="IdMovie" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="IdFormat" ColumnName="IdFormat" DataSourceName="[C:\CODE\C#\VIDEORENTAL\21 OCT 19\ANTHONYVIDEORENTAL\VIDEOCLS\DAL\DATAVID.MDF].dbo.MovieFormat" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@IdFormat" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="IdFormat" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="MovieGenroTableAdapter" GeneratorDataComponentClassName="MovieGenroTableAdapter" Name="MovieGenro" UserDataComponentName="MovieGenroTableAdapter">
             <MainSource>
@@ -555,46 +614,109 @@ VALUES (@Name, @Classification, @IdSucursal)</CommandText>
               <Mapping SourceColumn="IdMovie" DataSetColumn="IdMovie" />
               <Mapping SourceColumn="IdGenero" DataSetColumn="IdGenero" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="DataVidConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteQuery" Modifier="Public" Name="DeleteQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="DeleteQuery">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>DELETE FROM [dbo].[MovieGenro] WHERE (([IdMovie] = @IdMovie))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="IdMovie" ColumnName="IdMovie" DataSourceName="[C:\USERS\WRIGH_000\ONEDRIVE\CODE\C#\26 OCT 19\ANTHONYVIDEORENTAL\VIDEOCLS\DAL\DATAVID.MDF].dbo.MovieGenro" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@IdMovie" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="IdMovie" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+              </DbSource>
+              <DbSource ConnectionRef="DataVidConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="InsertQuery" Modifier="Public" Name="InsertQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="InsertQuery">
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>INSERT INTO [dbo].[MovieGenro] ([IdMovie], [IdGenero]) VALUES (@IdMovie, @IdGenero)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="IdMovie" ColumnName="IdMovie" DataSourceName="[C:\CODE\C#\VIDEORENTAL\21 OCT 19\ANTHONYVIDEORENTAL\VIDEOCLS\DAL\DATAVID.MDF].dbo.MovieGenro" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@IdMovie" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="IdMovie" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="IdGenero" ColumnName="IdGenero" DataSourceName="[C:\CODE\C#\VIDEORENTAL\21 OCT 19\ANTHONYVIDEORENTAL\VIDEOCLS\DAL\DATAVID.MDF].dbo.MovieGenro" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@IdGenero" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="IdGenero" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+              </DbSource>
+              <DbSource ConnectionRef="DataVidConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="UpdateQuery" Modifier="Public" Name="UpdateQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="UpdateQuery">
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>UPDATE [dbo].[MovieGenro] SET [IdGenero] = @IdGenero
+WHERE (([IdMovie] = @IdMovie))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="IdGenero" ColumnName="IdGenero" DataSourceName="[C:\CODE\C#\VIDEORENTAL\25 OCT 19\ANTHONYVIDEORENTAL\VIDEOCLS\DAL\DATAVID.MDF].dbo.MovieGenro" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@IdGenero" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="IdGenero" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="IdMovie" ColumnName="IdMovie" DataSourceName="[C:\CODE\C#\VIDEORENTAL\25 OCT 19\ANTHONYVIDEORENTAL\VIDEOCLS\DAL\DATAVID.MDF].dbo.MovieGenro" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@IdMovie" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="IdMovie" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="RentalTableAdapter" GeneratorDataComponentClassName="RentalTableAdapter" Name="Rental" UserDataComponentName="RentalTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="DataVidConnectionString (Settings)" DbObjectName="dbo.Rental" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="DataVidConnectionString (Settings)" DbObjectName="dbo.Rental" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>INSERT INTO [dbo].[Rental] ([IdMovie], [IdClient], [DateRent], [DateVencimiento]) VALUES (@IdMovie, @IdClient, @DateRent, @DateVencimiento)</CommandText>
+                    <CommandText>INSERT INTO [Rental] ([IdClient], [DateRent], [DateVencimiento], [Total], [IdSucursal], [IdPelicula]) VALUES (@IdClient, @DateRent, @DateVencimiento, @Total, @IdSucursal, @IdPelicula)</CommandText>
                     <Parameters>
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IdMovie" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IdMovie" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IdClient" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IdClient" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@DateRent" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="DateRent" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@DateVencimiento" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="DateVencimiento" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@DateRent" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateRent" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@DateVencimiento" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateVencimiento" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Total" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="Total" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IdSucursal" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IdSucursal" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IdPelicula" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IdPelicula" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
                   </DbCommand>
                 </InsertCommand>
                 <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT IdMovie, IdClient, DateRent, DateVencimiento FROM dbo.Rental</CommandText>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        IdRenta, IdClient, DateRent, DateVencimiento, Total, IdSucursal, IdPelicula
+FROM            Rental</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
             </MainSource>
             <Mappings>
-              <Mapping SourceColumn="IdMovie" DataSetColumn="IdMovie" />
               <Mapping SourceColumn="IdClient" DataSetColumn="IdClient" />
               <Mapping SourceColumn="DateRent" DataSetColumn="DateRent" />
               <Mapping SourceColumn="DateVencimiento" DataSetColumn="DateVencimiento" />
+              <Mapping SourceColumn="IdRenta" DataSetColumn="IdRenta" />
+              <Mapping SourceColumn="Total" DataSetColumn="Total" />
+              <Mapping SourceColumn="IdSucursal" DataSetColumn="IdSucursal" />
+              <Mapping SourceColumn="IdPelicula" DataSetColumn="IdPelicula" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="DataVidConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="InsertQuery" Modifier="Public" Name="InsertQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="InsertQuery">
+              <DbSource ConnectionRef="DataVidConnectionString (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="AddQuery" Modifier="Public" Name="AddQuery" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="AddQuery">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        COUNT(IdClient) AS Expr1
+FROM            Rental</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="DataVidConnectionString (Settings)" DbObjectName="dbo.Rental" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByIdRenta" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy2" GeneratorSourceName="FillByIdRenta" GetMethodModifier="Public" GetMethodName="GetDataBy2" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="FillByIdRenta">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        IdRenta, IdClient, DateRent, DateVencimiento, Total, IdSucursal, IdPelicula
+FROM            Rental
+WHERE       IdRenta=@IdRenta;</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="IdRenta" ColumnName="IdRenta" DataSourceName="[C:\USERS\ANTHO\VIDEOS\ANTHONYVIDEORENTAL(2.2)\VIDEOCLS\DAL\DATAVID.MDF].dbo.Rental" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@IdRenta" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="IdRenta" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="DataVidConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="InsertQuery" Modifier="Public" Name="InsertQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="InsertQuery">
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>INSERT INTO [dbo].[Rental] ([IdMovie], [IdClient], [DateRent], [DateVencimiento]) VALUES (@IdMovie, @IdClient, @DateRent, @DateVencimiento)</CommandText>
+                    <CommandText>INSERT INTO [Rental] ([IdClient], [DateRent], [DateVencimiento], [Total], [IdSucursal], [IdPelicula]) VALUES (@IdClient, @DateRent, @DateVencimiento, @Total, @IdSucursal, @IdPelicula);</CommandText>
                     <Parameters>
-                      <Parameter AllowDbNull="false" AutogeneratedName="IdMovie" ColumnName="IdMovie" DataSourceName="[C:\CODE\C#\VIDEORENTAL\14 OCT 19\ANTHONYVIDEORENTAL\VIDEOCLS\DAL\DATAVID.MDF].dbo.Rental" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@IdMovie" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="IdMovie" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="IdClient" ColumnName="IdClient" DataSourceName="[C:\CODE\C#\VIDEORENTAL\14 OCT 19\ANTHONYVIDEORENTAL\VIDEOCLS\DAL\DATAVID.MDF].dbo.Rental" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@IdClient" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="IdClient" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="DateRent" ColumnName="DateRent" DataSourceName="[C:\CODE\C#\VIDEORENTAL\14 OCT 19\ANTHONYVIDEORENTAL\VIDEOCLS\DAL\DATAVID.MDF].dbo.Rental" DataTypeServer="date" DbType="AnsiString" Direction="Input" ParameterName="@DateRent" Precision="0" ProviderType="Date" Scale="0" Size="3" SourceColumn="DateRent" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="DateVencimiento" ColumnName="DateVencimiento" DataSourceName="[C:\CODE\C#\VIDEORENTAL\14 OCT 19\ANTHONYVIDEORENTAL\VIDEOCLS\DAL\DATAVID.MDF].dbo.Rental" DataTypeServer="date" DbType="AnsiString" Direction="Input" ParameterName="@DateVencimiento" Precision="0" ProviderType="Date" Scale="0" Size="3" SourceColumn="DateVencimiento" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="IdClient" ColumnName="IdClient" DataSourceName="[C:\USERS\ANTHO\VIDEOS\ANTHONYVIDEORENTAL(2.2)\VIDEOCLS\DAL\DATAVID.MDF].dbo.Rental" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@IdClient" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="IdClient" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="DateRent" ColumnName="DateRent" DataSourceName="[C:\USERS\ANTHO\VIDEOS\ANTHONYVIDEORENTAL(2.2)\VIDEOCLS\DAL\DATAVID.MDF].dbo.Rental" DataTypeServer="datetime" DbType="DateTime" Direction="Input" ParameterName="@DateRent" Precision="0" ProviderType="DateTime" Scale="0" Size="8" SourceColumn="DateRent" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="DateVencimiento" ColumnName="DateVencimiento" DataSourceName="[C:\USERS\ANTHO\VIDEOS\ANTHONYVIDEORENTAL(2.2)\VIDEOCLS\DAL\DATAVID.MDF].dbo.Rental" DataTypeServer="datetime" DbType="DateTime" Direction="Input" ParameterName="@DateVencimiento" Precision="0" ProviderType="DateTime" Scale="0" Size="8" SourceColumn="DateVencimiento" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Total" ColumnName="Total" DataSourceName="[C:\USERS\ANTHO\VIDEOS\ANTHONYVIDEORENTAL(2.2)\VIDEOCLS\DAL\DATAVID.MDF].dbo.Rental" DataTypeServer="money" DbType="Currency" Direction="Input" ParameterName="@Total" Precision="0" ProviderType="Money" Scale="0" Size="8" SourceColumn="Total" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="IdSucursal" ColumnName="IdSucursal" DataSourceName="[C:\USERS\ANTHO\VIDEOS\ANTHONYVIDEORENTAL(2.2)\VIDEOCLS\DAL\DATAVID.MDF].dbo.Rental" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@IdSucursal" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="IdSucursal" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="IdPelicula" ColumnName="IdPelicula" DataSourceName="[C:\USERS\ANTHO\VIDEOS\ANTHONYVIDEORENTAL(2.2)\VIDEOCLS\DAL\DATAVID.MDF].dbo.Rental" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@IdPelicula" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="IdPelicula" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
                   </DbCommand>
                 </InsertCommand>
@@ -673,10 +795,10 @@ FROM            Rental INNER JOIN
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ComleteMoviTableAdapter" GeneratorDataComponentClassName="ComleteMoviTableAdapter" Name="ComleteMovi" UserDataComponentName="ComleteMoviTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="DataVidConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillCom" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="FillCom" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="FillCom">
+              <DbSource ConnectionRef="DataVidConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillCom" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="FillCom" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="FillCom">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT        Movie.Name AS Nombre, Genero.Type AS Genero, Movie.Classification AS Cassificacion, Format.Type AS Formato, MovieFormat.Qty AS Cant
+                    <CommandText>SELECT        MovieFormat.IdMovie AS [Id Pelicula], Movie.Name AS Nombre, Genero.Type AS Genero, Movie.Classification AS Clasificacion, Format.Type AS Formato, MovieFormat.Qty AS Cant
 FROM            Movie INNER JOIN
                          MovieFormat ON Movie.IdMovie = MovieFormat.IdMovie INNER JOIN
                          Format ON MovieFormat.IdFormat = Format.IdFormat INNER JOIN
@@ -690,11 +812,29 @@ FROM            Movie INNER JOIN
             <Mappings>
               <Mapping SourceColumn="Nombre" DataSetColumn="Nombre" />
               <Mapping SourceColumn="Genero" DataSetColumn="Genero" />
-              <Mapping SourceColumn="Cassificacion" DataSetColumn="Cassificacion" />
-              <Mapping SourceColumn="Formato" DataSetColumn="Formato" />
               <Mapping SourceColumn="Cant" DataSetColumn="Cant" />
+              <Mapping SourceColumn="Id Pelicula" DataSetColumn="Id Pelicula" />
+              <Mapping SourceColumn="Formato" DataSetColumn="Formato" />
+              <Mapping SourceColumn="Clasificacion" DataSetColumn="Clasificacion" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="DataVidConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillByName" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="FillByName" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillByName">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Movie.IdMovie, Movie.Name AS Nombre, Genero.Type AS Genero, Movie.Classification AS Cassificacion, Format.Type AS Formato, MovieFormat.Qty AS Cant
+FROM            Movie INNER JOIN
+                         MovieFormat ON Movie.IdMovie = MovieFormat.IdMovie INNER JOIN
+                         Format ON MovieFormat.IdFormat = Format.IdFormat INNER JOIN
+                         MovieGenro ON Movie.IdMovie = MovieGenro.IdMovie INNER JOIN
+                         Genero ON MovieGenro.IdGenero = Genero.IdGenero
+WHERE        (Movie.Name LIKE @Name)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Name" ColumnName="Name" DataSourceName="[C:\USERS\GLENN\ONEDRIVE\CODE\C#\ANTHONYVIDEORENTAL\VIDEOCLS\DAL\DATAVID.MDF].dbo.Movie" DataTypeServer="varchar(20)" DbType="AnsiString" Direction="Input" ParameterName="@Name" Precision="0" ProviderType="VarChar" Scale="0" Size="20" SourceColumn="Nombre" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="UserTableAdapter" GeneratorDataComponentClassName="UserTableAdapter" Name="User" UserDataComponentName="UserTableAdapter">
             <MainSource>
@@ -768,7 +908,7 @@ SELECT IdUser, UserName, FirstName, LastName, Profile, Password, IdSucursal FROM
               <Mapping SourceColumn="IdSucursal" DataSetColumn="IdSucursal" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="DataVidConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteQuery" Modifier="Public" Name="DeleteQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="DeleteQuery">
+              <DbSource ConnectionRef="DataVidConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteQuery" Modifier="Public" Name="DeleteQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="DeleteQuery">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>DELETE FROM [dbo].[User] WHERE (([IdUser] = @Original_IdUser))</CommandText>
@@ -778,7 +918,7 @@ SELECT IdUser, UserName, FirstName, LastName, Profile, Password, IdSucursal FROM
                   </DbCommand>
                 </DeleteCommand>
               </DbSource>
-              <DbSource ConnectionRef="DataVidConnectionString (Settings)" DbObjectName="dbo.[User]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByIdUser" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="FillByIdUser" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillByIdUser">
+              <DbSource ConnectionRef="DataVidConnectionString (Settings)" DbObjectName="dbo.[User]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByIdUser" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy1" GeneratorSourceName="FillByIdUser" GetMethodModifier="Public" GetMethodName="GetDataBy1" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="FillByIdUser">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT IdUser, UserName, FirstName, LastName, Profile, Password, IdSucursal 
@@ -790,7 +930,7 @@ WHERE IdUser =@IdUser</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="DataVidConnectionString (Settings)" DbObjectName="dbo.[User]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByUserName" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy1" GeneratorSourceName="FillByUserName" GetMethodModifier="Public" GetMethodName="GetDataBy1" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="FillByUserName">
+              <DbSource ConnectionRef="DataVidConnectionString (Settings)" DbObjectName="dbo.[User]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByUserName" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy11" GeneratorSourceName="FillByUserName" GetMethodModifier="Public" GetMethodName="GetDataBy11" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy11" UserSourceName="FillByUserName">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT IdUser, UserName, FirstName, LastName, Profile, Password, IdSucursal 
@@ -802,7 +942,7 @@ WHERE UserName =@UserName</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="DataVidConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="InsertQuery" Modifier="Public" Name="InsertQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy4" UserSourceName="InsertQuery">
+              <DbSource ConnectionRef="DataVidConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="InsertQuery" Modifier="Public" Name="InsertQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="InsertQuery">
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>INSERT INTO [dbo].[User] ([IdUser], [UserName], [FirstName], [LastName], [Profile], [Password], [IdSucursal]) VALUES (@IdUser, @UserName, @FirstName, @LastName, @Profile, @Password, @IdSucursal)</CommandText>
@@ -818,7 +958,7 @@ WHERE UserName =@UserName</CommandText>
                   </DbCommand>
                 </InsertCommand>
               </DbSource>
-              <DbSource ConnectionRef="DataVidConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="UpdateQuery" Modifier="Public" Name="UpdateQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="UpdateQuery">
+              <DbSource ConnectionRef="DataVidConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="UpdateQuery" Modifier="Public" Name="UpdateQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="UpdateQuery">
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>UPDATE [dbo].[User] SET [IdUser] = @IdUser, [UserName] = @UserName, [FirstName] = @FirstName, [LastName] = @LastName, [Profile] = @Profile, [Password] = @Password, [IdSucursal] = @IdSucursal WHERE (([IdUser] = @Original_IdUser))</CommandText>
@@ -831,6 +971,72 @@ WHERE UserName =@UserName</CommandText>
                       <Parameter AllowDbNull="false" AutogeneratedName="Password" ColumnName="Password" DataSourceName="[C:\CODE\C#\VIDEORENTAL\15 OCT 19\ANTHONYVIDEORENTAL\VIDEOCLS\DAL\DATAVID.MDF].dbo.[User]" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@Password" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumn="Password" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="IdSucursal" ColumnName="IdSucursal" DataSourceName="[C:\CODE\C#\VIDEORENTAL\15 OCT 19\ANTHONYVIDEORENTAL\VIDEOCLS\DAL\DATAVID.MDF].dbo.[User]" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@IdSucursal" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="IdSucursal" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="Original_IdUser" ColumnName="IdUser" DataSourceName="[C:\CODE\C#\VIDEORENTAL\15 OCT 19\ANTHONYVIDEORENTAL\VIDEOCLS\DAL\DATAVID.MDF].dbo.[User]" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Original_IdUser" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="IdUser" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DevolucionesTableAdapter" GeneratorDataComponentClassName="DevolucionesTableAdapter" Name="Devoluciones" UserDataComponentName="DevolucionesTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DataVidConnectionString (Settings)" DbObjectName="dbo.Devoluciones" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[Devoluciones] ([IdCliente], [IdPelicula], [FechaDevolucion]) VALUES (@IdCliente, @IdPelicula, @FechaDevolucion)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IdCliente" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IdCliente" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IdPelicula" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IdPelicula" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@FechaDevolucion" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="FechaDevolucion" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT IdCliente, IdPelicula, FechaDevolucion FROM dbo.Devoluciones</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="IdCliente" DataSetColumn="IdCliente" />
+              <Mapping SourceColumn="IdPelicula" DataSetColumn="IdPelicula" />
+              <Mapping SourceColumn="FechaDevolucion" DataSetColumn="FechaDevolucion" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="DataVidConnectionString (Settings)" DbObjectName="dbo.Devoluciones" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByIdClienteIdPelicula" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy1" GeneratorSourceName="FillByIdClienteIdPelicula" GetMethodModifier="Public" GetMethodName="GetDataBy1" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="FillByIdClienteIdPelicula">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT IdCliente, IdPelicula, FechaDevolucion FROM dbo.Devoluciones
+WHERE IdCliente = @IdCliente AND IdPelicula = @IdPelicula</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="IdCliente" ColumnName="IdCliente" DataSourceName="[C:\CODE\C#\VIDEORENTAL\28 OCT 19\ANTHONYVIDEORENTAL\VIDEOCLS\DAL\DATAVID.MDF].dbo.Devoluciones" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@IdCliente" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="IdCliente" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="IdPelicula" ColumnName="IdPelicula" DataSourceName="[C:\CODE\C#\VIDEORENTAL\28 OCT 19\ANTHONYVIDEORENTAL\VIDEOCLS\DAL\DATAVID.MDF].dbo.Devoluciones" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@IdPelicula" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="IdPelicula" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="DataVidConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="InsertQuery" Modifier="Public" Name="InsertQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="InsertQuery">
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>INSERT INTO [dbo].[Devoluciones] ([IdCliente], [IdPelicula], [FechaDevolucion]) VALUES (@IdCliente, @IdPelicula, @FechaDevolucion)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="IdCliente" ColumnName="IdCliente" DataSourceName="[C:\CODE\C#\VIDEORENTAL\28 OCT 19\ANTHONYVIDEORENTAL\VIDEOCLS\DAL\DATAVID.MDF].dbo.Devoluciones" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@IdCliente" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="IdCliente" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="IdPelicula" ColumnName="IdPelicula" DataSourceName="[C:\CODE\C#\VIDEORENTAL\28 OCT 19\ANTHONYVIDEORENTAL\VIDEOCLS\DAL\DATAVID.MDF].dbo.Devoluciones" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@IdPelicula" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="IdPelicula" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="FechaDevolucion" ColumnName="FechaDevolucion" DataSourceName="[C:\CODE\C#\VIDEORENTAL\28 OCT 19\ANTHONYVIDEORENTAL\VIDEOCLS\DAL\DATAVID.MDF].dbo.Devoluciones" DataTypeServer="datetime" DbType="DateTime" Direction="Input" ParameterName="@FechaDevolucion" Precision="0" ProviderType="DateTime" Scale="0" Size="8" SourceColumn="FechaDevolucion" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+              </DbSource>
+              <DbSource ConnectionRef="DataVidConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="UpdateQuery" Modifier="Public" Name="UpdateQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="UpdateQuery">
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>UPDATE [dbo].[Devoluciones] SET [FechaDevolucion] = @FechaDevolucion 
+WHERE (([IdCliente] = @IdClient) AND ([IdPelicula] = @IdPelicula))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="FechaDevolucion" ColumnName="FechaDevolucion" DataSourceName="[C:\CODE\C#\VIDEORENTAL\28 OCT 19\ANTHONYVIDEORENTAL\VIDEOCLS\DAL\DATAVID.MDF].dbo.Devoluciones" DataTypeServer="datetime" DbType="DateTime" Direction="Input" ParameterName="@FechaDevolucion" Precision="0" ProviderType="DateTime" Scale="0" Size="8" SourceColumn="FechaDevolucion" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="IdClient" ColumnName="IdCliente" DataSourceName="[C:\CODE\C#\VIDEORENTAL\28 OCT 19\ANTHONYVIDEORENTAL\VIDEOCLS\DAL\DATAVID.MDF].dbo.Devoluciones" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@IdClient" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="IdCliente" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="IdPelicula" ColumnName="IdPelicula" DataSourceName="[C:\CODE\C#\VIDEORENTAL\28 OCT 19\ANTHONYVIDEORENTAL\VIDEOCLS\DAL\DATAVID.MDF].dbo.Devoluciones" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@IdPelicula" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="IdPelicula" SourceColumnNullMapping="false" SourceVersion="Original" />
                     </Parameters>
                   </DbCommand>
                 </UpdateCommand>
@@ -997,10 +1203,13 @@ WHERE UserName =@UserName</CommandText>
         <xs:element name="Rental" msprop:Generator_TableClassName="RentalDataTable" msprop:Generator_TableVarName="tableRental" msprop:Generator_RowChangedName="RentalRowChanged" msprop:Generator_TablePropName="Rental" msprop:Generator_RowDeletingName="RentalRowDeleting" msprop:Generator_RowChangingName="RentalRowChanging" msprop:Generator_RowEvHandlerName="RentalRowChangeEventHandler" msprop:Generator_RowDeletedName="RentalRowDeleted" msprop:Generator_RowClassName="RentalRow" msprop:Generator_UserTableName="Rental" msprop:Generator_RowEvArgName="RentalRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="IdMovie" msprop:Generator_ColumnVarNameInTable="columnIdMovie" msprop:Generator_ColumnPropNameInRow="IdMovie" msprop:Generator_ColumnPropNameInTable="IdMovieColumn" msprop:Generator_UserColumnName="IdMovie" type="xs:int" />
               <xs:element name="IdClient" msprop:Generator_ColumnVarNameInTable="columnIdClient" msprop:Generator_ColumnPropNameInRow="IdClient" msprop:Generator_ColumnPropNameInTable="IdClientColumn" msprop:Generator_UserColumnName="IdClient" type="xs:int" />
               <xs:element name="DateRent" msprop:Generator_ColumnVarNameInTable="columnDateRent" msprop:Generator_ColumnPropNameInRow="DateRent" msprop:Generator_ColumnPropNameInTable="DateRentColumn" msprop:Generator_UserColumnName="DateRent" type="xs:dateTime" />
               <xs:element name="DateVencimiento" msprop:Generator_ColumnVarNameInTable="columnDateVencimiento" msprop:Generator_ColumnPropNameInRow="DateVencimiento" msprop:Generator_ColumnPropNameInTable="DateVencimientoColumn" msprop:Generator_UserColumnName="DateVencimiento" type="xs:dateTime" />
+              <xs:element name="IdRenta" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnIdRenta" msprop:Generator_ColumnPropNameInRow="IdRenta" msprop:Generator_ColumnPropNameInTable="IdRentaColumn" msprop:Generator_UserColumnName="IdRenta" type="xs:int" />
+              <xs:element name="Total" msprop:Generator_ColumnVarNameInTable="columnTotal" msprop:Generator_ColumnPropNameInRow="Total" msprop:Generator_ColumnPropNameInTable="TotalColumn" msprop:Generator_UserColumnName="Total" type="xs:decimal" />
+              <xs:element name="IdSucursal" msprop:Generator_ColumnVarNameInTable="columnIdSucursal" msprop:Generator_ColumnPropNameInRow="IdSucursal" msprop:Generator_ColumnPropNameInTable="IdSucursalColumn" msprop:Generator_UserColumnName="IdSucursal" type="xs:int" />
+              <xs:element name="IdPelicula" msprop:Generator_ColumnVarNameInTable="columnIdPelicula" msprop:Generator_ColumnPropNameInRow="IdPelicula" msprop:Generator_ColumnPropNameInTable="IdPeliculaColumn" msprop:Generator_UserColumnName="IdPelicula" type="xs:int" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -1064,13 +1273,8 @@ WHERE UserName =@UserName</CommandText>
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Cassificacion" msprop:Generator_ColumnVarNameInTable="columnCassificacion" msprop:Generator_ColumnPropNameInRow="Cassificacion" msprop:Generator_ColumnPropNameInTable="CassificacionColumn" msprop:Generator_UserColumnName="Cassificacion">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="10" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
+              <xs:element name="Cant" msprop:Generator_ColumnVarNameInTable="columnCant" msprop:Generator_ColumnPropNameInRow="Cant" msprop:Generator_ColumnPropNameInTable="CantColumn" msprop:Generator_UserColumnName="Cant" type="xs:int" />
+              <xs:element name="Id_x0020_Pelicula" msprop:Generator_ColumnVarNameInTable="columnId_Pelicula" msprop:Generator_ColumnPropNameInRow="Id_Pelicula" msprop:Generator_ColumnPropNameInTable="Id_PeliculaColumn" msprop:Generator_UserColumnName="Id Pelicula" type="xs:int" />
               <xs:element name="Formato" msprop:Generator_ColumnVarNameInTable="columnFormato" msprop:Generator_ColumnPropNameInRow="Formato" msprop:Generator_ColumnPropNameInTable="FormatoColumn" msprop:Generator_UserColumnName="Formato">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -1078,7 +1282,13 @@ WHERE UserName =@UserName</CommandText>
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Cant" msprop:Generator_ColumnVarNameInTable="columnCant" msprop:Generator_ColumnPropNameInRow="Cant" msprop:Generator_ColumnPropNameInTable="CantColumn" msprop:Generator_UserColumnName="Cant" type="xs:int" />
+              <xs:element name="Clasificacion" msprop:Generator_ColumnVarNameInTable="columnClasificacion" msprop:Generator_ColumnPropNameInRow="Clasificacion" msprop:Generator_ColumnPropNameInTable="ClasificacionColumn" msprop:Generator_UserColumnName="Clasificacion">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -1122,6 +1332,16 @@ WHERE UserName =@UserName</CommandText>
                 </xs:simpleType>
               </xs:element>
               <xs:element name="IdSucursal" msprop:Generator_ColumnVarNameInTable="columnIdSucursal" msprop:Generator_ColumnPropNameInRow="IdSucursal" msprop:Generator_ColumnPropNameInTable="IdSucursalColumn" msprop:Generator_UserColumnName="IdSucursal" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Devoluciones" msprop:Generator_TableClassName="DevolucionesDataTable" msprop:Generator_TableVarName="tableDevoluciones" msprop:Generator_RowChangedName="DevolucionesRowChanged" msprop:Generator_TablePropName="Devoluciones" msprop:Generator_RowDeletingName="DevolucionesRowDeleting" msprop:Generator_RowChangingName="DevolucionesRowChanging" msprop:Generator_RowEvHandlerName="DevolucionesRowChangeEventHandler" msprop:Generator_RowDeletedName="DevolucionesRowDeleted" msprop:Generator_RowClassName="DevolucionesRow" msprop:Generator_UserTableName="Devoluciones" msprop:Generator_RowEvArgName="DevolucionesRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IdCliente" msprop:Generator_ColumnVarNameInTable="columnIdCliente" msprop:Generator_ColumnPropNameInRow="IdCliente" msprop:Generator_ColumnPropNameInTable="IdClienteColumn" msprop:Generator_UserColumnName="IdCliente" type="xs:int" />
+              <xs:element name="IdPelicula" msprop:Generator_ColumnVarNameInTable="columnIdPelicula" msprop:Generator_ColumnPropNameInRow="IdPelicula" msprop:Generator_ColumnPropNameInTable="IdPeliculaColumn" msprop:Generator_UserColumnName="IdPelicula" type="xs:int" />
+              <xs:element name="FechaDevolucion" msprop:Generator_ColumnVarNameInTable="columnFechaDevolucion" msprop:Generator_ColumnPropNameInRow="FechaDevolucion" msprop:Generator_ColumnPropNameInTable="FechaDevolucionColumn" msprop:Generator_UserColumnName="FechaDevolucion" type="xs:dateTime" />
+              <xs:element name="IdRenta" msprop:Generator_ColumnVarNameInTable="columnIdRenta" msprop:Generator_ColumnPropNameInRow="IdRenta" msprop:Generator_ColumnPropNameInTable="IdRentaColumn" msprop:Generator_UserColumnName="IdRenta" type="xs:int" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -1169,11 +1389,13 @@ WHERE UserName =@UserName</CommandText>
       <msdata:Relationship name="FK_MovieGenro_ToGenero" msdata:parent="Genero" msdata:child="MovieGenro" msdata:parentkey="IdGenero" msdata:childkey="IdGenero" msprop:Generator_UserChildTable="MovieGenro" msprop:Generator_ChildPropName="GetMovieGenroRows" msprop:Generator_UserRelationName="FK_MovieGenro_ToGenero" msprop:Generator_RelationVarName="relationFK_MovieGenro_ToGenero" msprop:Generator_UserParentTable="Genero" msprop:Generator_ParentPropName="GeneroRow" />
       <msdata:Relationship name="FK_MovieGenro_ToMovie" msdata:parent="Movie" msdata:child="MovieGenro" msdata:parentkey="IdMovie" msdata:childkey="IdMovie" msprop:Generator_UserChildTable="MovieGenro" msprop:Generator_ChildPropName="GetMovieGenroRows" msprop:Generator_UserRelationName="FK_MovieGenro_ToMovie" msprop:Generator_RelationVarName="relationFK_MovieGenro_ToMovie" msprop:Generator_UserParentTable="Movie" msprop:Generator_ParentPropName="MovieRow" />
       <msdata:Relationship name="FK_Rental_ToClient" msdata:parent="Client" msdata:child="Rental" msdata:parentkey="IdClient" msdata:childkey="IdClient" msprop:Generator_UserChildTable="Rental" msprop:Generator_ChildPropName="GetRentalRows" msprop:Generator_UserRelationName="FK_Rental_ToClient" msprop:Generator_RelationVarName="relationFK_Rental_ToClient" msprop:Generator_UserParentTable="Client" msprop:Generator_ParentPropName="ClientRow" />
-      <msdata:Relationship name="FK_Rental_ToMovie" msdata:parent="Movie" msdata:child="Rental" msdata:parentkey="IdMovie" msdata:childkey="IdMovie" msprop:Generator_UserChildTable="Rental" msprop:Generator_ChildPropName="GetRentalRows" msprop:Generator_UserRelationName="FK_Rental_ToMovie" msprop:Generator_RelationVarName="relationFK_Rental_ToMovie" msprop:Generator_UserParentTable="Movie" msprop:Generator_ParentPropName="MovieRow" />
       <msdata:Relationship name="FK_Client_ToSurcursal" msdata:parent="Sucursal" msdata:child="Client" msdata:parentkey="IdSucursal" msdata:childkey="Idsucursal" msprop:Generator_UserChildTable="Client" msprop:Generator_ChildPropName="GetClientRows" msprop:Generator_UserRelationName="FK_Client_ToSurcursal" msprop:Generator_ParentPropName="SucursalRow" msprop:Generator_RelationVarName="relationFK_Client_ToSurcursal" msprop:Generator_UserParentTable="Sucursal" />
       <msdata:Relationship name="FK_FacturaHeader_ToIdSucursal" msdata:parent="Sucursal" msdata:child="FacturaHeader" msdata:parentkey="IdSucursal" msdata:childkey="IdSucursal" msprop:Generator_UserChildTable="FacturaHeader" msprop:Generator_ChildPropName="GetFacturaHeaderRows" msprop:Generator_UserRelationName="FK_FacturaHeader_ToIdSucursal" msprop:Generator_ParentPropName="SucursalRow" msprop:Generator_RelationVarName="relationFK_FacturaHeader_ToIdSucursal" msprop:Generator_UserParentTable="Sucursal" />
       <msdata:Relationship name="FK_Movie_ToSucursal" msdata:parent="Sucursal" msdata:child="Movie" msdata:parentkey="IdSucursal" msdata:childkey="IdSucursal" msprop:Generator_UserChildTable="Movie" msprop:Generator_ChildPropName="GetMovieRows" msprop:Generator_UserRelationName="FK_Movie_ToSucursal" msprop:Generator_ParentPropName="SucursalRow" msprop:Generator_RelationVarName="relationFK_Movie_ToSucursal" msprop:Generator_UserParentTable="Sucursal" />
       <msdata:Relationship name="FK_User_ToSucursal" msdata:parent="Sucursal" msdata:child="User" msdata:parentkey="IdSucursal" msdata:childkey="IdSucursal" msprop:Generator_UserChildTable="User" msprop:Generator_ChildPropName="GetUserRows" msprop:Generator_UserRelationName="FK_User_ToSucursal" msprop:Generator_ParentPropName="SucursalRow" msprop:Generator_RelationVarName="relationFK_User_ToSucursal" msprop:Generator_UserParentTable="Sucursal" />
+      <msdata:Relationship name="FK_Rental_ToSucursal" msdata:parent="Sucursal" msdata:child="Rental" msdata:parentkey="IdSucursal" msdata:childkey="IdSucursal" msprop:Generator_UserChildTable="Rental" msprop:Generator_ChildPropName="GetRentalRows" msprop:Generator_UserRelationName="FK_Rental_ToSucursal" msprop:Generator_RelationVarName="relationFK_Rental_ToSucursal" msprop:Generator_UserParentTable="Sucursal" msprop:Generator_ParentPropName="SucursalRow" />
+      <msdata:Relationship name="FK_Devoluciones_ToMovie" msdata:parent="Movie" msdata:child="Devoluciones" msdata:parentkey="IdMovie" msdata:childkey="IdPelicula" msprop:Generator_UserChildTable="Devoluciones" msprop:Generator_ChildPropName="GetDevolucionesRows" msprop:Generator_UserRelationName="FK_Devoluciones_ToMovie" msprop:Generator_RelationVarName="relationFK_Devoluciones_ToMovie" msprop:Generator_UserParentTable="Movie" msprop:Generator_ParentPropName="MovieRow" />
+      <msdata:Relationship name="FK_Devoluciones_ToCliente" msdata:parent="Client" msdata:child="Devoluciones" msdata:parentkey="IdClient" msdata:childkey="IdCliente" msprop:Generator_UserChildTable="Devoluciones" msprop:Generator_ChildPropName="GetDevolucionesRows" msprop:Generator_UserRelationName="FK_Devoluciones_ToCliente" msprop:Generator_RelationVarName="relationFK_Devoluciones_ToCliente" msprop:Generator_UserParentTable="Client" msprop:Generator_ParentPropName="ClientRow" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

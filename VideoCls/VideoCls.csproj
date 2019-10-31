@@ -58,6 +58,9 @@
   <ItemGroup>
     <Compile Include="Class\CalculoCls.cs" />
     <Compile Include="Class\ClientCls.cs" />
+    <Compile Include="Class\DevolucionesCls.cs" />
+    <Compile Include="Class\GeneroCls.cs" />
+    <Compile Include="Class\MoveFormatCls.cs" />
     <Compile Include="Class\MovieCls.cs" />
     <Compile Include="Class\RentalCls.cs" />
     <Compile Include="Class\StaticCls.cs" />

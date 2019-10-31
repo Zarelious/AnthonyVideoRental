@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace VideoCls.Class
 {
-    class UserCls
+    public class UserCls
     {
         public int IdUser { get; set; }
         public String FirstName { get; set; }
@@ -91,7 +91,7 @@ namespace VideoCls.Class
 
             try
             {
-                mta.FillByIdUser(mds.User, IdUser);
+                mta.FillByUserName(mds.User, vIdUsuario);
                 if (mds.User.Rows.Count == 1)
                 {
                     DAL.AdminData.UserRow mUsuario = (DAL.AdminData.UserRow)mds.User.Rows[0];

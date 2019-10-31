@@ -8,10 +8,14 @@ namespace VideoCls.Class
 {
     public class RentalCls
     {
-        public int IdMovie { get; set; }
+        
         public int IdClient { get; set; }
         public DateTime DateRent { get; set; }
         public DateTime DateVencimineto { get; set; }
+        public int IdRenta { get; set; }
+        public int IdPelicula { get; set; }
+        public decimal Total { get; set; }
+        public int Idsucursal { get; set; }
 
         /// <summary>
         /// Para insertar una nueva renta
@@ -23,7 +27,7 @@ namespace VideoCls.Class
 
             try
             {
-                mta.InsertQuery(IdMovie, IdClient, Convert.ToString(DateRent),  Convert.ToString(DateVencimineto));
+                mta.InsertQuery(IdClient,DateRent,DateVencimineto,Total,Idsucursal,IdPelicula);
 
                 return true;
             }
@@ -76,5 +80,56 @@ namespace VideoCls.Class
                 return mds.RentalCom;
             }
         }
+
+        public int CountMovie()
+        {
+            DAL.AdminDataTableAdapters.RentalTableAdapter mta = new DAL.AdminDataTableAdapters.RentalTableAdapter();
+
+            try
+            {
+                return Convert.ToInt32(mta.AddQuery());
+
+            }
+            catch
+            {
+                return 0;
+            }
+
+        }
+        public DAL.AdminData.RentalDataTable SearchRental()
+        {
+            DAL.AdminDataTableAdapters.RentalTableAdapter mta = new DAL.AdminDataTableAdapters.RentalTableAdapter();
+
+            DAL.AdminData mds = new DAL.AdminData();
+            try
+            {
+                mta.FillByIdRenta(mds.Rental, IdRenta);
+
+                if (mds.Rental.Rows.Count == 1)
+                {
+                    DAL.AdminData.RentalRow mrow = (DAL.AdminData.RentalRow)mds.Rental.Rows[0];
+
+                    IdClient = mrow.IdClient;
+                    DateRent = mrow.DateRent;
+                    DateVencimineto = mrow.DateVencimiento;
+                    IdRenta = mrow.IdRenta;
+                    IdPelicula = mrow.IdPelicula;
+                    Idsucursal = mrow.IdSucursal;
+                    Total = mrow.Total;
+
+                    return mds.Rental;
+                }
+                else
+                {
+                    return mds.Rental;
+                }
+
+            }
+            catch
+            {
+                return mds.Rental;
+            }
+        }
+
     }
 }

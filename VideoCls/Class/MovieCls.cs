@@ -102,7 +102,7 @@ namespace VideoCls.Class
         }
 
         // Para llamar una pelicula
-        public DAL.AdminData.MovieDataTable ListOneMovie()
+        public DAL.AdminData.MovieDataTable SearchMovie()
         {
             DAL.AdminDataTableAdapters.MovieTableAdapter mta = new DAL.AdminDataTableAdapters.MovieTableAdapter();
 
@@ -134,6 +134,107 @@ namespace VideoCls.Class
                 return mds.Movie;
             }
         }
-                
+
+       
+        /// <summary>
+        /// List of Generos
+        /// </summary>
+        /// <returns>returns the a list Generos</returns>
+        public DAL.AdminData.GeneroDataTable ListGenero()
+        {
+            DAL.AdminDataTableAdapters.GeneroTableAdapter mta = new DAL.AdminDataTableAdapters.GeneroTableAdapter();
+
+            DAL.AdminData mds = new DAL.AdminData();
+            try
+            {
+                mta.Fill(mds.Genero);
+                return mds.Genero;
+            }
+            catch
+            {
+                return mds.Genero;
+            }
+        }
+
+        /// <summary>
+        /// List of all formats
+        /// </summary>
+        /// <returns>returns a list</returns>
+        public DAL.AdminData.FormatDataTable ListFormat()
+        {
+            DAL.AdminDataTableAdapters.FormatTableAdapter mta = new DAL.AdminDataTableAdapters.FormatTableAdapter();
+
+            DAL.AdminData mds = new DAL.AdminData();
+            try
+            {
+                mta.Fill(mds.Format);
+                return mds.Format;
+            }
+            catch
+            {
+                return mds.Format;
+            }
+        }
+
+        /// <summary>
+        /// Buscar Peliculas por Nombre
+        /// </summary>
+        /// <returns>la informacion de la pelicula </returns>
+        public DAL.AdminData.MovieDataTable SearchMovieName(String mName)
+        {
+            DAL.AdminDataTableAdapters.MovieTableAdapter mta = new DAL.AdminDataTableAdapters.MovieTableAdapter();
+
+            DAL.AdminData mds = new DAL.AdminData();
+            try
+            {
+                mta.FillByName(mds.Movie, mName);
+
+                if (mds.Movie.Rows.Count == 1)
+                {
+                    DAL.AdminData.MovieRow mrow = (DAL.AdminData.MovieRow)mds.Movie.Rows[0];
+
+                    IdMovie = mrow.IdMovie;
+                    Name = mrow.Name;
+                    Clasificacion = mrow.Classification;
+                    IdSucursal = mrow.IdSucursal;
+
+
+                    return mds.Movie;
+                }
+                else
+                {
+                    return mds.Movie;
+                }
+
+            }
+            catch
+            {
+                return mds.Movie;
+            }
+        }
+        public Boolean SearchMovieNameBool(String mName)
+        {
+            DAL.AdminDataTableAdapters.MovieTableAdapter mta = new DAL.AdminDataTableAdapters.MovieTableAdapter();
+
+            DAL.AdminData mds = new DAL.AdminData();
+            try
+            {
+                mta.FillByName(mds.Movie, mName);
+
+                if (mds.Movie.Rows.Count == 1)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+
+            }
+            catch
+            {
+                return false;
+            }
+        }
     }
 }

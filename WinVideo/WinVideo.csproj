@@ -46,11 +46,32 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataVidDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataVidDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataVidDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataVidDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataVidDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataVidDataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Forms\AdminClientesFrm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\AdminClientesFrm.Designer.cs">
       <DependentUpon>AdminClientesFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Devoluciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Devoluciones.Designer.cs">
+      <DependentUpon>Devoluciones.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Factura.cs">
       <SubType>Form</SubType>
@@ -58,31 +79,43 @@
     <Compile Include="Forms\Factura.Designer.cs">
       <DependentUpon>Factura.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\LogInFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LogInFrm.Designer.cs">
+      <DependentUpon>LogInFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\MainMenuFrm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\MainMenuFrm.Designer.cs">
       <DependentUpon>MainMenuFrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\VentasRentFrm.cs">
+    <Compile Include="Forms\RentasFrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\VentasRentFrm.Designer.cs">
-      <DependentUpon>VentasRentFrm.cs</DependentUpon>
+    <Compile Include="Forms\RentasFrm.Designer.cs">
+      <DependentUpon>RentasFrm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\AdminClientesFrm.resx">
       <DependentUpon>AdminClientesFrm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Devoluciones.resx">
+      <DependentUpon>Devoluciones.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Factura.resx">
       <DependentUpon>Factura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LogInFrm.resx">
+      <DependentUpon>LogInFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainMenuFrm.resx">
       <DependentUpon>MainMenuFrm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\VentasRentFrm.resx">
-      <DependentUpon>VentasRentFrm.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\RentasFrm.resx">
+      <DependentUpon>RentasFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -93,6 +126,39 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="DataVidDataSet.xsc">
+      <DependentUpon>DataVidDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DataVidDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataVidDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataVidDataSet.xss">
+      <DependentUpon>DataVidDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DataVidDataSet1.xsc">
+      <DependentUpon>DataVidDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataVidDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataVidDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataVidDataSet1.xss">
+      <DependentUpon>DataVidDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataVidDataSet2.xsc">
+      <DependentUpon>DataVidDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="DataVidDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataVidDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataVidDataSet2.xss">
+      <DependentUpon>DataVidDataSet2.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

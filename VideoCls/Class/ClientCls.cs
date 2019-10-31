@@ -21,6 +21,7 @@ namespace VideoCls.Class
         public int IdSucursal { get; set; }
         public int Qty { get; set; }
 
+        public decimal Total { get; set; }
         /// <summary>
         /// Para llamar una list de clientes
         /// </summary>
@@ -141,6 +142,63 @@ namespace VideoCls.Class
             {
                 return false;
             }
+        }
+        public decimal ObtenerTotal(int vIdCliente)
+        {
+            DAL.AdminDataTableAdapters.ClientTableAdapter mta = new DAL.AdminDataTableAdapters.ClientTableAdapter();
+
+            DAL.AdminData mds = new DAL.AdminData();
+
+
+            mta.FillByIdClient(mds.Client, vIdCliente);
+
+            if (mds.Client.Rows.Count == 1)
+            {
+                DAL.AdminData.ClientRow mrow = (DAL.AdminData.ClientRow)mds.Client.Rows[0];
+
+                IdClient = mrow.IdClient;
+                Qty = mrow.Qty;
+                if (Qty != 0 && Qty % 5 == 0)
+                {
+                    return 0;
+                }
+
+                else
+                {
+                    return 1000;
+                }
+            }
+            else
+            {
+                return -1;
+            }
+
+
+        }
+
+        public bool UpdateQtyCliente(int vIdCliente)
+        {
+            DAL.AdminDataTableAdapters.ClientTableAdapter mta = new DAL.AdminDataTableAdapters.ClientTableAdapter();
+
+            DAL.AdminData mds = new DAL.AdminData();
+
+
+            mta.FillByIdClient(mds.Client, vIdCliente);
+
+            if (mds.Client.Rows.Count == 1)
+            {
+                DAL.AdminData.ClientRow mrow = (DAL.AdminData.ClientRow)mds.Client.Rows[0];
+
+                Qty = mrow.Qty;
+                mta.UpdateQty((Qty + 1),vIdCliente);
+                return true;
+
+            }
+            else
+            {
+                return false;
+            }
+
         }
     }
 }
